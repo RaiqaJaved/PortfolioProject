@@ -1,0 +1,34 @@
+﻿@page
+@model Portfolioo.Pages.myAdmin.UpdateSkillsModel
+@{
+}
+<div class="container">
+    <form method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h1>
+                    Update Skills
+                </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Name</label>
+                <input class="form-control" asp-for="skills.Name">
+                <input class="form-control" hidden asp-for="skills.Id">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Percentage</label>
+                <input class="form-control" asp-for="skills.Percentage">
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <input type="submit" value="Update Education" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>
+

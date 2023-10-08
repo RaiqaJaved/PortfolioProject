@@ -1,0 +1,50 @@
+﻿@page
+@model Portfolioo.Pages.myAdmin.AddSocialNetworksModel
+@{
+}
+<div class="container">
+    <form method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h1>
+                    Add Social Networks
+                </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Facebook</label>
+                <input class="form-control" asp-for="socialNetworks.Facebook">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Twitter</label>
+                <input class="form-control" asp-for="socialNetworks.Twitter">
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Linkdin</label>
+                <input class="form-control" asp-for="socialNetworks.LinkedIn">
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Institute-Instragram</label>
+                <input class="form-control" asp-for="socialNetworks.Instragram">
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">skyp</label>
+                <input class="form-control" asp-for="socialNetworks.Skyp">
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <input type="submit" value="Add SocialNetworks" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>
