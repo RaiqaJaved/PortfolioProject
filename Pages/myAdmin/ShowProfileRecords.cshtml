@@ -1,5 +1,5 @@
 ﻿@page
-@model Portfolioo.Pages.myAdmin.AddProfileModel
+@model Portfolioo.Pages.myAdmin.ShowProfileRecordsModel
 @{
 }
 <div class="container">
@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <h1>
-                    Add-Profile
+                    Update Profile
                 </h1>
             </div>
         </div>
@@ -15,6 +15,7 @@
             <div class="col-md-4">
                 <label class="form-label">Name</label>
                 <input class="form-control" asp-for="profile.Name">
+                <input class="form-control"hidden asp-for="profile.Id">
             </div>
         </div>
         <div class="row justify-content-center">
@@ -81,13 +82,21 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <label class="form-label">Image</label>
+                <img src="~/images/@Model.profile.Image" />
+                 </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Image</label>
                 <input class="form-control" asp-for="profile.Photo">
+                <input class="form-control"hidden asp-for="profile.Image">
             </div>
         </div>
         <div class="row  justify-content-center">
             <div class="col-md-4">
-                <input type="submit" value="Add Profile" class="btn btn-primary" />
+                <input type="submit" value="Update Profile" class="btn btn-primary" />
             </div>
         </div>
     </form>
 </div>
+

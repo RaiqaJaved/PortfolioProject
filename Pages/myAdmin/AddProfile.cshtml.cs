@@ -22,10 +22,10 @@ namespace Portfolioo.Pages.myAdmin
         {
             string ImageName = profile.Photo.FileName.ToString();
 
-            var FolderPath = Path.Combine(env.WebRootPath,"images");
-            var ImagePath = Path.Combine(FolderPath,ImageName);
+            var FolderPath = Path.Combine(env.WebRootPath, "images");
+            var ImagePath = Path.Combine(FolderPath, ImageName);
 
-            FileStream fs=new FileStream(ImagePath, FileMode.Create);
+            FileStream fs= new FileStream(ImagePath, FileMode.Create);
             profile.Photo.CopyTo(fs);
             fs.Dispose();
 

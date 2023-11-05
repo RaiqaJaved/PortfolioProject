@@ -11,8 +11,8 @@ using Portfolioo.Data;
 namespace Portfolioo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230929145357_ProfileModelUpdate")]
-    partial class ProfileModelUpdate
+    [Migration("20231105061653_ProfileUpdateModel")]
+    partial class ProfileUpdateModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -186,7 +186,6 @@ namespace Portfolioo.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -272,6 +271,10 @@ namespace Portfolioo.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
