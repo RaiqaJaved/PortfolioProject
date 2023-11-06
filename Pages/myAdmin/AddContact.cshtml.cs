@@ -18,9 +18,14 @@ namespace Portfolioo.Pages.myAdmin
         }
         public IActionResult OnPost(Contact contact)
         {
-            db.tbl_Contact.Add(contact);
-            db.SaveChanges();
-            return RedirectToPage("ShowContact");
+            if (ModelState.IsValid)
+            {
+                db.tbl_Contact.Add(contact);
+                db.SaveChanges();
+                return RedirectToPage("ShowContact");
+
+            }
+            return Page();    
         }
     }
 }

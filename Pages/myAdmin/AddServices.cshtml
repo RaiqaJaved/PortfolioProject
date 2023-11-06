@@ -1,0 +1,43 @@
+﻿@page
+@model Portfolioo.Pages.myAdmin.AddServicesModel
+@{
+}
+<div class="container">
+    <form method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h1>
+                    Add-Services
+                </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Tittle</label>
+                <input class="form-control" asp-for="services.Tittle">
+                <span asp-validation-for="services.Tittle" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">IconName</label>
+                <input class="form-control" asp-for="services.IconName">
+                <span asp-validation-for="services.IconName" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Description</label>
+                <input class="form-control" asp-for="services.Desc">
+                <span asp-validation-for="services.Desc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-md-4">
+                <input type="submit" value="Add Services" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>

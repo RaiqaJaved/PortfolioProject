@@ -18,9 +18,14 @@ namespace Portfolioo.Pages.myAdmin
         }
         public IActionResult OnPost(Education education)
         {
-            db.tbl_Education.Add(education);
-            db.SaveChanges();
-            return RedirectToPage("ShowEducation");
-        }
+            if(ModelState.IsValid)
+            {
+                db.tbl_Education.Add(education);
+                db.SaveChanges();
+                return RedirectToPage("ShowEducation");
+
+            }
+            return Page();
+            }
     }
 }

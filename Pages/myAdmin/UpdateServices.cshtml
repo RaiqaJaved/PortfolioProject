@@ -1,0 +1,33 @@
+﻿@page
+@model Portfolioo.Pages.myAdmin.UpdateServicesModel
+@{
+}
+<div class="container">
+    <form method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h1>
+                    Update-Services
+                </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Tittle</label>
+                <input class="form-control" asp-for="services.Tittle">
+                <input class="form-control" hidden asp-for="services.Id">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <label class="form-label">Description</label>
+                <input class="form-control" asp-for="services.Desc">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <input type="submit" value="Update services" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>

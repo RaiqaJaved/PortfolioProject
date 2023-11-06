@@ -18,9 +18,14 @@ namespace Portfolioo.Pages.myAdmin
         }
         public IActionResult OnPost(Skills skills)
         {
-            db.tbl_Skills.Add(skills);
-            db.SaveChanges();
-            return RedirectToPage("ShowSkills");
+            if(ModelState.IsValid)
+            {
+                db.tbl_Skills.Add(skills);
+                db.SaveChanges();
+                return RedirectToPage("ShowSkills");
+
+            }
+            return Page();
         }
     }
 }

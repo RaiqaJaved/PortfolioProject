@@ -18,9 +18,14 @@ namespace Portfolioo.Pages.myAdmin
         }
         public IActionResult OnPost(Experince experince)
         {
-            db.tbl_Experince.Add(experince);
-            db.SaveChanges();
-            return RedirectToPage("ShowExperince");
+            if (ModelState.IsValid)
+            {
+                db.tbl_Experince.Add(experince);
+                db.SaveChanges();
+                return RedirectToPage("ShowExperince");
+
+            }
+            return Page();
         }
     }
 }
